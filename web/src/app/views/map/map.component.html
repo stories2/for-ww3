@@ -20,4 +20,13 @@
       <strong>InfoWindow content</strong>
     </agm-info-window>
   </agm-marker>
+  <agm-rectangle
+        [north]="lat - 0.0003"
+        [east]="lng + 0.0003"
+        [south]="lat + 0.0003"
+        [west]="lng - 0.0003"
+        [fillColor]="'red'"
+        [editable]="false"
+      >
+      </agm-rectangle>
 </agm-map>
