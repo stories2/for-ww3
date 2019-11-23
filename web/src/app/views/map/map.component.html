@@ -1,3 +1,23 @@
 <div>
   map works!
+  {{lat}}, {{lng}}, {{zoom}}
 </div>
+<agm-map
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="zoom"
+  [disableDefaultUI]="false"
+  [zoomControl]="false"
+  (mapClick)="mapClicked($event)"
+  >
+  <agm-marker 
+    [latitude]="lat"
+    [longitude]="lng"
+    [label]="'T'"
+    [markerDraggable]="false"
+    [iconUrl]="icon">
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+  </agm-marker>
+</agm-map>
