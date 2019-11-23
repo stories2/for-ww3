@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { faBars, faCompressArrowsAlt, faCompress,
           faSync, faCrosshairs } from '@fortawesome/free-solid-svg-icons';
 import { DataService } from './services/data.service';
+import { GpsService } from './services/gps.service';
 
 @Component({
   selector: 'app-root',
@@ -18,19 +19,26 @@ export class AppComponent {
   faSync = faSync;
   faCrosshairs = faCrosshairs;
 
-  constructor(private dataService: DataService) {
-    this.dataService.__mapModel = {
-      lat: 37.551171,
-      lng: 126.9877188,
-      zoom: 19
-    };
+  constructor(private dataService: DataService, private gpsService: GpsService) {
+    this.updateLoc();
   }
 
   onRepositionBtnClicked() {
-    this.dataService.__mapModel = {
-      lat: 37.551171 + (Math.random() * 0.0000001),
-      lng: 126.9877188 + (Math.random() * 0.0000001),
-      zoom: 19 + (Math.random() * 0.0000001)
-    };
+    this.updateLoc();
+  }
+
+  updateLoc() {
+    this.gpsService.getLocation()
+      .then(pos => {
+        console.log('loc', pos);
+        this.dataService.__mapModel = {
+          lat: pos.lat + (Math.random() * 0.0000001),
+          lng: pos.lng + (Math.random() * 0.0000001),
+          zoom: 19 + (Math.random() * 0.0000001)
+        };
+      })
+      .catch(err => {
+        console.error('loc', err);
+      });
   }
 }
