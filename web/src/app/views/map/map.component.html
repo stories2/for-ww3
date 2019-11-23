@@ -23,6 +23,16 @@
       <strong>InfoWindow content</strong>
     </agm-info-window>
   </agm-marker>
+  <agm-marker 
+    [latitude]="37.551171"
+    [longitude]="126.9877188"
+    [label]="'T'"
+    [markerDraggable]="false"
+    [iconUrl]="icon">
+    <agm-info-window>
+      <strong>Catched area</strong>
+    </agm-info-window>
+  </agm-marker>
   <agm-rectangle
         [north]="37.551171 - 0.0003"
         [east]="126.9877188 + 0.0003"
@@ -30,6 +40,8 @@
         [west]="126.9877188 - 0.0003"
         [fillColor]="'red'"
         [editable]="false"
+        [clickable]="true"
+        [draggable]="false" 
       >
       </agm-rectangle>
 </agm-map>
