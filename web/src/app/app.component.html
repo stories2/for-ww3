@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+
+<mat-sidenav-container>
+    <mat-sidenav #snav [mode]="'over'" opened style="width: 250px;">
+                 hello
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+      <button 
+          mat-icon-button 
+          (click)="snav.toggle()"
+          ngClass='side-nav-btn'>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

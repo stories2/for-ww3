@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import { MatSidenavModule, MatIconModule, MatButtonModule } from '@angular/material';
+
 import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +23,12 @@ import { ErrorComponent } from './views/error/error.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+
+    BrowserAnimationsModule,
+
+    MatSidenavModule,
+    MatIconModule,
+    MatButtonModule,
 
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB3FYRULDlTqMkdGSfifvCd51fMwLVwCMs'
