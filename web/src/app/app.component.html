@@ -6,11 +6,42 @@
 
     <mat-sidenav-content>
       <router-outlet></router-outlet>
+
+      <h2>For WW3</h2>
+
       <button 
           mat-icon-button 
           (click)="snav.toggle()"
           ngClass='side-nav-btn'>
-        <mat-icon>menu</mat-icon>
+        <!-- <mat-icon>menu</mat-icon> -->
+        <fa-icon ngClass='fa-2x' [icon]="faBars"></fa-icon>
+      </button>
+      <button 
+          mat-icon-button 
+          ngClass='attack-btn'>
+        <!-- <mat-icon>menu</mat-icon> -->
+        <fa-icon ngClass='fa-2x' [icon]="faCompressArrowsAlt"></fa-icon>
+      </button>
+
+      <button 
+          mat-icon-button
+          ngClass='occupy-btn' >
+        <!-- <mat-icon>menu</mat-icon> -->
+        <fa-icon ngClass='fa-2x' [icon]="faCompress"></fa-icon>
+        <span ngClass='occupy-text'>점령하기</span>
+      </button>
+
+      <button 
+          mat-icon-button 
+          ngClass='resync-btn'>
+        <!-- <mat-icon>menu</mat-icon> -->
+        <fa-icon [icon]="faSync"></fa-icon>
+      </button>
+      <button 
+          mat-icon-button 
+          ngClass='reposition-btn'>
+        <!-- <mat-icon>menu</mat-icon> -->
+        <fa-icon [icon]="faCrosshairs"></fa-icon>
       </button>
     </mat-sidenav-content>
   </mat-sidenav-container>

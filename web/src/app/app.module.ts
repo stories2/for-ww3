@@ -6,6 +6,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { MatSidenavModule, MatIconModule, MatButtonModule } from '@angular/material';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +31,8 @@ import { ErrorComponent } from './views/error/error.component';
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
+
+    FontAwesomeModule,
 
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB3FYRULDlTqMkdGSfifvCd51fMwLVwCMs'

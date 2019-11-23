@@ -12,3 +12,67 @@ mat-sidenav-container {
     margin-left: 8px;
     margin-top: 8px;;
 }
+
+.attack-btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+.occupy-btn {
+    position: fixed;
+    left: calc(50% - 150px);
+    bottom: 15%;
+    width: 300px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #808080;
+}
+
+.occupy-text {
+    font-size: 1.25em;
+    margin-left: 20px;
+}
+
+.resync-btn {
+    position: fixed;
+    left: calc(50% - 150px);
+    bottom: calc(15% - 60px);
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px #808080;
+}
+
+.reposition-btn {
+    position: fixed;
+    left: calc(50% - 90px);
+    bottom: calc(15% - 60px);
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px #808080;
+}
+
+fa-icon {
+    font-size: 1.2em;
+    color: rgb(120, 120, 120);
+}
+
+fa-icon.fa-2x {
+    font-size: 2em;
+    color: rgb(120, 120, 120);
+}
+
+h2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0;
+    vertical-align: middle;
+    height: 100%;
+    text-align: center;
+    color: #499BED;
+}
