@@ -2,6 +2,7 @@
   map works!
   {{lat}}, {{lng}}, {{zoom}}
 </div> -->
+<!-- (mapClick)="mapClicked($event)" -->
 <agm-map
   [latitude]="mapModel.lat"
   [longitude]="mapModel.lng"
@@ -9,7 +10,7 @@
   [disableDefaultUI]="false"
   [zoomControl]="false"
   [streetViewControl]="false"
-  (mapClick)="mapClicked($event)"
+  
   [usePanning]="true"
   >
   <agm-marker 
