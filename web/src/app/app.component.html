@@ -41,28 +41,28 @@
   <mat-sidenav-content>
     <router-outlet></router-outlet>
 
-    <h2>For WW3</h2>
+    <h2 *ngIf="currentURL == '/map'">For WW3</h2>
 
     <button mat-icon-button (click)="snav.toggle()" ngClass='side-nav-btn'>
       <!-- <mat-icon>menu</mat-icon> -->
       <fa-icon ngClass='fa-2x' [icon]="faBars"></fa-icon>
     </button>
-    <button mat-icon-button ngClass='attack-btn'>
+    <button mat-icon-button ngClass='attack-btn' *ngIf="currentURL == '/map'">
       <!-- <mat-icon>menu</mat-icon> -->
       <fa-icon ngClass='fa-2x' [icon]="faCompressArrowsAlt"></fa-icon>
     </button>
 
-    <button mat-icon-button ngClass='occupy-btn'>
+    <button mat-icon-button ngClass='occupy-btn' *ngIf="currentURL == '/map'">
       <!-- <mat-icon>menu</mat-icon> -->
       <fa-icon ngClass='fa-2x' [icon]="faCompress"></fa-icon>
       <span ngClass='occupy-text'>Occupy</span>
     </button>
 
-    <button mat-icon-button ngClass='resync-btn'>
+    <button mat-icon-button ngClass='resync-btn' *ngIf="currentURL == '/map'">
       <!-- <mat-icon>menu</mat-icon> -->
       <fa-icon [icon]="faSync"></fa-icon>
     </button>
-    <button mat-icon-button ngClass='reposition-btn' (click)='onRepositionBtnClicked()'>
+    <button mat-icon-button ngClass='reposition-btn' (click)='onRepositionBtnClicked()' *ngIf="currentURL == '/map'">
       <!-- <mat-icon>menu</mat-icon> -->
       <fa-icon [icon]="faCrosshairs"></fa-icon>
     </button>

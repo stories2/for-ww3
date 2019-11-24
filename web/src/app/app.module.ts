@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { MatSidenavModule, MatIconModule, MatButtonModule,
-          MatListModule } from '@angular/material';
+          MatListModule, MatToolbarModule } from '@angular/material';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -39,6 +39,7 @@ import { HistoryComponent } from './views/history/history.component';
     MatIconModule,
     MatButtonModule,
     MatListModule,
+    MatToolbarModule,
 
     FontAwesomeModule,
 
