@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { MatSidenavModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatSidenavModule, MatIconModule, MatButtonModule,
+          MatListModule } from '@angular/material';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -31,6 +32,7 @@ import { ErrorComponent } from './views/error/error.component';
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
+    MatListModule,
 
     FontAwesomeModule,
 

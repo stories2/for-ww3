@@ -1,48 +1,70 @@
-
 <mat-sidenav-container>
-    <mat-sidenav #snav [mode]="'over'" opened style="width: 250px;">
-                 hello
-    </mat-sidenav>
+  <!-- opened -->
+  <mat-sidenav #snav [mode]="'over'" style="width: 250px;">
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <span style="width: 100%;">Sign In / Up</span>
+        <button mat-icon-button (click)="snav.toggle()">
+            <!-- <mat-icon>menu</mat-icon> -->
+            <fa-icon ngClass='fa-2x' [icon]="faTimes"></fa-icon>
+          </button>
+      </mat-list-item>
+      <mat-list-item role="listitem" ngClass='profile-img'>
+      </mat-list-item>
+      <mat-list-item role="listitem" (click)="snav.toggle()">
+          <fa-icon [icon]="faMapMarkedAlt"></fa-icon>
+          <span ngClass='menu-item'>Map</span>
+      </mat-list-item>
+      <mat-list-item role="listitem" (click)="snav.toggle()">
+          <fa-icon [icon]="faUser"></fa-icon>
+          <span ngClass='menu-item'>My info</span>
+          
+      </mat-list-item>
+      <mat-list-item role="listitem" (click)="snav.toggle()">
+          <fa-icon [icon]="faCompressArrowsAlt"></fa-icon>
+          <span ngClass='menu-item'>Attack status</span>
+          
+      </mat-list-item>
+      <mat-list-item role="listitem" (click)="snav.toggle()">
+          <fa-icon [icon]="faHistory"></fa-icon>
+          <span ngClass='menu-item'>History</span>
+          
+      </mat-list-item>
+      <mat-list-item role="listitem" (click)="snav.toggle()">
+          <fa-icon [icon]="faUserSlash"></fa-icon>
+          <span ngClass='menu-item'>Log out</span>
+          
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
 
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
 
-      <h2>For WW3</h2>
+    <h2>For WW3</h2>
 
-      <button 
-          mat-icon-button 
-          (click)="snav.toggle()"
-          ngClass='side-nav-btn'>
-        <!-- <mat-icon>menu</mat-icon> -->
-        <fa-icon ngClass='fa-2x' [icon]="faBars"></fa-icon>
-      </button>
-      <button 
-          mat-icon-button 
-          ngClass='attack-btn'>
-        <!-- <mat-icon>menu</mat-icon> -->
-        <fa-icon ngClass='fa-2x' [icon]="faCompressArrowsAlt"></fa-icon>
-      </button>
+    <button mat-icon-button (click)="snav.toggle()" ngClass='side-nav-btn'>
+      <!-- <mat-icon>menu</mat-icon> -->
+      <fa-icon ngClass='fa-2x' [icon]="faBars"></fa-icon>
+    </button>
+    <button mat-icon-button ngClass='attack-btn'>
+      <!-- <mat-icon>menu</mat-icon> -->
+      <fa-icon ngClass='fa-2x' [icon]="faCompressArrowsAlt"></fa-icon>
+    </button>
 
-      <button 
-          mat-icon-button
-          ngClass='occupy-btn' >
-        <!-- <mat-icon>menu</mat-icon> -->
-        <fa-icon ngClass='fa-2x' [icon]="faCompress"></fa-icon>
-        <span ngClass='occupy-text'>점령하기</span>
-      </button>
+    <button mat-icon-button ngClass='occupy-btn'>
+      <!-- <mat-icon>menu</mat-icon> -->
+      <fa-icon ngClass='fa-2x' [icon]="faCompress"></fa-icon>
+      <span ngClass='occupy-text'>Occupy</span>
+    </button>
 
-      <button 
-          mat-icon-button 
-          ngClass='resync-btn'>
-        <!-- <mat-icon>menu</mat-icon> -->
-        <fa-icon [icon]="faSync"></fa-icon>
-      </button>
-      <button 
-          mat-icon-button 
-          ngClass='reposition-btn'
-          (click)='onRepositionBtnClicked()'>
-        <!-- <mat-icon>menu</mat-icon> -->
-        <fa-icon [icon]="faCrosshairs"></fa-icon>
-      </button>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    <button mat-icon-button ngClass='resync-btn'>
+      <!-- <mat-icon>menu</mat-icon> -->
+      <fa-icon [icon]="faSync"></fa-icon>
+    </button>
+    <button mat-icon-button ngClass='reposition-btn' (click)='onRepositionBtnClicked()'>
+      <!-- <mat-icon>menu</mat-icon> -->
+      <fa-icon [icon]="faCrosshairs"></fa-icon>
+    </button>
+  </mat-sidenav-content>
+</mat-sidenav-container>

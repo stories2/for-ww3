@@ -76,3 +76,14 @@ h2 {
     text-align: center;
     color: #499BED;
 }
+
+.profile-img {
+    height: 250px !important;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/for-ww3.appspot.com/o/test-lab%2Fgame%20user.png?alt=media&token=f274ea01-ce82-48fe-a6c3-2244fb5ad926');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+span.menu-item {
+    margin-left: 16px;
+}

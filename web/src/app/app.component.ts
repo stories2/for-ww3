@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
 import { faBars, faCompressArrowsAlt, faCompress,
-          faSync, faCrosshairs } from '@fortawesome/free-solid-svg-icons';
+          faSync, faCrosshairs, faTimes,
+          faMapMarkedAlt, faHistory, faUser,
+          faUserSlash } from '@fortawesome/free-solid-svg-icons';
 import { DataService } from './services/data.service';
 import { GpsService } from './services/gps.service';
 
@@ -18,6 +20,11 @@ export class AppComponent {
   faCompress = faCompress;
   faSync = faSync;
   faCrosshairs = faCrosshairs;
+  faTimes = faTimes;
+  faMapMarkedAlt = faMapMarkedAlt;
+  faHistory = faHistory;
+  faUser = faUser;
+  faUserSlash = faUserSlash;
 
   constructor(private dataService: DataService, private gpsService: GpsService) {
     this.updateLoc();
