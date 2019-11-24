@@ -23,10 +23,10 @@ export class MapComponent implements OnInit, OnDestroy, OnChanges {
     } as MapModel;
 
     this.icon = {
-      url: 'https://cdn4.iconfinder.com/data/icons/contact-us-19/48/35-512.png',
+      url: 'https://firebasestorage.googleapis.com/v0/b/for-ww3.appspot.com/o/test-lab%2Fgame%20user.png?alt=media&token=f274ea01-ce82-48fe-a6c3-2244fb5ad926',
       scaledSize: {
-        width: 40,
-        height: 40
+        width: 96,
+        height: 96
       }
     };
   }
