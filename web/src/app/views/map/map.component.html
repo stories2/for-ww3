@@ -4,13 +4,13 @@
 </div> -->
 <!-- (mapClick)="mapClicked($event)" -->
 <agm-map
+  (centerChange)="onMapCenterChange($event)"
   [latitude]="mapModel.lat"
   [longitude]="mapModel.lng"
   [zoom]="mapModel.zoom"
   [disableDefaultUI]="false"
   [zoomControl]="false"
   [streetViewControl]="false"
-  
   [usePanning]="true"
   >
   <agm-marker 

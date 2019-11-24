@@ -50,4 +50,8 @@ export class MapComponent implements OnInit, OnDestroy, OnChanges {
         console.log('map sub', this.mapModel);
       });
   }
+
+  onMapCenterChange(latLng) {
+    console.log('changed lat lng', latLng);
+  }
 }
