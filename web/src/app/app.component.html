@@ -11,21 +11,21 @@
       </mat-list-item>
       <mat-list-item role="listitem" ngClass='profile-img'>
       </mat-list-item>
-      <mat-list-item role="listitem" (click)="snav.toggle()">
+      <mat-list-item role="listitem" (click)="snav.toggle(); pageService.moveTo('/map')">
           <fa-icon [icon]="faMapMarkedAlt"></fa-icon>
           <span ngClass='menu-item'>Map</span>
       </mat-list-item>
-      <mat-list-item role="listitem" (click)="snav.toggle()">
+      <mat-list-item role="listitem" (click)="snav.toggle(); pageService.moveTo('/my-info')">
           <fa-icon [icon]="faUser"></fa-icon>
           <span ngClass='menu-item'>My info</span>
           
       </mat-list-item>
-      <mat-list-item role="listitem" (click)="snav.toggle()">
+      <mat-list-item role="listitem" (click)="snav.toggle(); pageService.moveTo('/attack-status')">
           <fa-icon [icon]="faCompressArrowsAlt"></fa-icon>
           <span ngClass='menu-item'>Attack status</span>
           
       </mat-list-item>
-      <mat-list-item role="listitem" (click)="snav.toggle()">
+      <mat-list-item role="listitem" (click)="snav.toggle(); pageService.moveTo('/history')">
           <fa-icon [icon]="faHistory"></fa-icon>
           <span ngClass='menu-item'>History</span>
           

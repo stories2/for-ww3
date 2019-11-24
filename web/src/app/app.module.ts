@@ -15,12 +15,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapComponent } from './views/map/map.component';
 import { ErrorComponent } from './views/error/error.component';
+import { MyInfoComponent } from './views/my-info/my-info.component';
+import { AttackStatusComponent } from './views/attack-status/attack-status.component';
+import { HistoryComponent } from './views/history/history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    ErrorComponent
+    ErrorComponent,
+    MyInfoComponent,
+    AttackStatusComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

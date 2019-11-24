@@ -6,6 +6,7 @@ import { faBars, faCompressArrowsAlt, faCompress,
           faUserSlash } from '@fortawesome/free-solid-svg-icons';
 import { DataService } from './services/data.service';
 import { GpsService } from './services/gps.service';
+import { PageService } from './services/page.service';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,7 @@ export class AppComponent {
   faUser = faUser;
   faUserSlash = faUserSlash;
 
-  constructor(private dataService: DataService, private gpsService: GpsService) {
+  constructor(private dataService: DataService, private gpsService: GpsService, public pageService: PageService) {
     this.updateLoc();
   }
 
