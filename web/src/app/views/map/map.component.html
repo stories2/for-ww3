@@ -16,11 +16,34 @@
   <agm-marker 
     [latitude]="mapModel.lat"
     [longitude]="mapModel.lng"
-    [label]="'T'"
     [markerDraggable]="false"
     [iconUrl]="icon">
     <agm-info-window>
-      <strong>InfoWindow content</strong>
+      <!-- <strong>InfoWindow content</strong> -->
+      <div style="
+      width: 180px;
+      height: 100px;
+      display: grid;
+      grid-template-rows: 50px 50px;
+      grid-template-columns: 90px 90px;
+  
+  ">
+        <div style="
+        /* grid-row: 1/2; */
+        grid-row-start: 1;
+        grid-column: 1;
+        grid-row-end: 3;
+    
+    ">img</div>
+        <div style="
+        grid-row: 1;
+        grid-column: 2;
+    ">text</div>
+        <div style="
+        grid-row: 2;
+        grid-column: 2;
+    ">text</div>
+      </div>
     </agm-info-window>
   </agm-marker>
   <agm-marker 
